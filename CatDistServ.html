@@ -1,0 +1,509 @@
+<!DOCTYPE html> <!--tell the browser this is html-->
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width,
+        initial-scale=1">
+        
+        <link rel="stylesheet" href="style.css">
+
+        <title>Hell's Delivery</title>
+
+        <style>
+            p
+            {
+                color: #30261f;
+            }
+
+            h3
+            {
+                color: #5635db;
+            }
+
+            navLabel
+            {
+                color: #5635db;
+            }
+
+            main 
+            {
+                border: 0px, solid, #30261f;
+                background-color: #d4d0c8;
+                 margin-top: 5px;
+                width:auto;
+                height:fit-content;
+                grid-row: auto;
+                grid-column: auto;
+
+                box-shadow: 5px 5px rgba(255, 255, 255, 1) inset, 5px 5px rgba(0, 0, 0, 0.8);
+            }
+
+            p
+            {
+               color: #0f5d85;
+            }
+
+
+            header_container
+            {
+                background-color: #30261f;
+                
+            }
+
+            h1
+            {
+                color: #f2f2f2;
+            }
+
+            header
+            {
+                background-color: #d4d0c8;
+            }
+
+            anno
+            {
+                color: #30261f;
+            }
+
+            h2
+            {
+                color: #5635db;
+            }
+
+            topbarlabel
+            {
+                color: #5635db;
+            }
+
+            @keyframes scrollBackground {
+
+                from
+                {
+                    background-position: 0 0;
+                }
+
+                to
+                {
+                    background-position: -1920px -1920px;
+                }
+
+
+            }
+        </style>
+
+    </head>
+    <body style="background-image: url(Images/CatBackground.png);
+                background-repeat: repeat;
+                animation: scrollBackground 100s linear infinite;
+                background-color: rgb(1, 1, 26);">
+
+        <div class="box"> 
+            
+            <header_container>
+            <titleText> <h1 style="margin-left: 10px;">Mattais Ramos</h1>  </titleText> 
+
+            <header> <topBarLabel style="margin-left: 10px;"> Game Design, Programming </topBarLabel>  
+            <a href="index.html"  style="margin-left: 275px;""><topBarLabel>Home</topBarLabel></a>
+            <a href="projects.html"> <topBarLabel>Projects</topBarLabel></a>
+            <a href="Contact.html"><topBarLabel>Contact / About</topBarLabel></a>
+            </header>
+            </header_container>
+            
+            <nav style="background-image: url(Images/CatDistServiceNav.png);
+            font-size: 10px;"> 
+                <ul>
+                    <li> <a href="#overview"><navLabel>Overview</navLabel></a></li>
+                    <li> <a href="#factory"><navLabel>Factory</navLabel></a></li>
+                    <li> <a href="#resource"><navLabel>Resources</navLabel></a></li>
+                    <li> <a href="#designdoc"><navLabel>Design Docs</navLabel> </a></li>
+                    <li> <a href="#scope"><navLabel>Scope and Cuts</navLabel> </a></li>
+                    <li> <a href="#conclusion"><navLabel>Conclusions</navLabel> </a></li>
+                </ul>
+            </nav>
+
+            
+            <main style="grid-column: 2 / 4;" id="overview">
+
+                
+
+               
+                
+                <h2 >Project Overview</h2>
+
+                
+                <p>
+                    The Cat Distribution Service is a factory building roguelike
+                    where you build and maintain a growing factory that produces
+                    cats. From the usual cat patterns and colours to matcha and 
+                    alien cats, you will make it all at the Cat Distribution Service.
+                    <br>
+                    <br>
+                    The current project is still in development, a playable demo will
+                    be available soon!
+
+                </p>
+            </main>
+
+            <main style="grid-column: 2 / 4;">
+                <h2> Why Godot? </h2>
+                <p>
+                    I chose to develop this game in Godot rather than Unity for a few key reasons. The main reason was to expand my horizons and learn another game engine! Another reason for using Godot was how lightweight it was compared to Unity, everything from launching the editor, building the game and entering play was a lot quicker and made the process a lot more enjoyable.
+
+                </p>
+
+
+
+            </main>
+
+            <main style="grid-column: 2 / 4;">
+                <h2> What Do I Miss? </h2>
+                <p>
+                    Unity Events. Unity Events are super versatile and easy to use/implement, they allow other people in the engine to easily hook things up and create in-game events without even touching the code base. Godot has Signals as an in editor event solution but in my opinion Unity Events are overall much better.
+                </p>
+
+                
+
+            </main>
+
+            <main style="width: 150%;" id="factory">
+                <h2>Factory Parts</h2>
+                <p>
+The most important system to nail down for this game is the factory parts. A goal of mine when creating them was to make my pipeline comprehensive but fast in order to test out a variety of different parts quickly. I did this with a few tricks.
+
+                
+                   <br>
+
+                </p>
+                <h3>Composition And Inheritance</h3>
+
+                <p>
+With a combination of composition and inheritance I can create factory parts that have the same base features but with the ability to easily add varying effects.
+<br>
+For example, an event is triggered when exporting a resource and I can easily hookup any number of unique nodes that do something when a resource is exported or imported, or I can create a replacement for the resource exporter that inherits from the same script with variations in how it works. This way I can alter the resources passed in and out as well as do unique things for each factory part all while having them keep the same basic functionality.
+
+                </p>
+                
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 130px;">
+                <br>
+                <img src="Images/ShopImg.PNG"
+                width="300">
+                <br>
+                    <anno>(Shop)</anno>
+                <br>
+                <br>
+                <video src="Videos/ShortShowcase.mp4" autoplay loop muted playsinline width="100%" height="200px"></video>
+                <br>
+                <anno>(Factory example)</anno>
+                <br>
+                <br>
+            </main>
+            
+            
+            <main style="grid-column: 2 / 4;" id="resource">
+                <h2> Resources </h2>
+                <p>
+In order to streamline the process more I use something in Godot called a custom resource. A custom resource is essentially the godot version of a scriptable object (from unity) which means it is a class that can store data and be referenced by any script that holds a reference to the base resource (it does not need a runtime specific reference). These custom resources hold information like the stations name, the sprite of the station, a description of the station, the rarity, the price and a reference to the prefab of that station. This way I can use this information to display data when hovering over the station, I can use it in the shop to represent the station as well as in the inventory of the player, then when they want to place it down, the custom resource can pass the prefab to the player controller to instantiate it.                 </p>
+
+                
+
+            </main>
+
+           
+             <main style="width: 144%;
+             text-align: center;">
+                
+                <img src="Images/SuperMarketInfo.PNG"
+                width="380">
+                <br>
+                <anno>(Station info resource)</anno>
+                <br>
+                <br>
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 120px;">
+
+                <img src="Images/SuperMarketInfoGame.png"
+                width="210">
+                <br>
+                <anno>(In game station)</anno>
+                <br>
+                <br>
+
+            </main>
+
+
+              <main style="grid-column: 2 / 4;">
+                <p>
+This really makes the process a lot easier, as in order to implement and test a new station, all I have to do is create the new prefab, add any unique scripts or combination of already made scripts and create the custom resource. Below are some screenshots of the excel sheet I use to test out new factory part ideas and see how they might work in game.
+
+                
+
+            </main>
+
+            <main style="grid-column: 2 / 4;
+            text-align: center;">
+                <img src="Images/Excel_3.png"
+                width="773px">
+
+                <br>
+                <anno>(Factory part list)</anno>
+                <br>
+                <br>
+            </main>
+
+            </main>
+
+           
+             <main style="width: 170%;
+             text-align: center;">
+                
+                <img src="Images/Excel_1.PNG"
+                width="449">
+                <br>
+                <anno>(Day earnings simulation)</anno>
+                <br>
+                <br>
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 200px;">
+
+                <img src="Images/Excel_2.png"
+                width="300">
+                <br>
+                <anno>(Cat patterns and colours)</anno>
+                <br>
+                <br>
+
+            </main>
+
+
+             <main style="grid-column: 2 / 4;" id="designdoc">
+                <h2> Design Documents</h2>
+                <h3> From Design to Prototype </h3>
+                <p>
+                    Here are some side by side examples of UI design vs the prototype implemented into the game
+
+                </p>
+
+            </main>
+
+            <main style="width: 122%;
+             text-align: center;">
+                
+                <img src="Images/ShopUI.PNG"
+                width="315">
+                <br>
+                <anno>(Shop UI design)</anno>
+                <br>
+                <br>
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 60px;">
+
+                <video src="Videos/Shop.mp4" autoplay loop muted width="100%" height="250px"></video>
+
+                <br>
+                <anno>(Shop prototype)</anno>
+                <br>
+                <br>
+
+            </main>
+
+             <main style="width: 122%;
+             text-align: center;">
+                
+                <img src="Images/CalendarUI.PNG"
+                width="315">
+                <br>
+                <anno>(Calendar UI design)</anno>
+                <br>
+                <br>
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 60px;">
+
+                <video src="Videos/Calendar.mp4" autoplay loop muted width="100%" height="250px"></video>
+
+                <br>
+                <anno>(Calendar prototype)</anno>
+                <br>
+                <br>
+
+            </main>
+
+            <main style="width: 155%;
+             text-align: center;">
+                
+                <img src="Images/UpgradeDesign.PNG"
+                width="400px">
+                <br>
+                <anno>(Upgrade system design)</anno>
+                <br>
+                <br>
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 140px;">
+
+                <video src="Videos/UpgradeSystem.mp4" autoplay loop muted width="100%" height="200px"></video>
+
+                <br>
+                <anno>(Upgrade system Prototype)</anno>
+                <br>
+                <br>
+
+            </main>
+
+
+            </main>
+
+             <main style="width: 122%;
+             text-align: center;">
+                
+                <img src="Images/CatBuilds.PNG"
+                width="315">
+                <br>
+                <anno>(Variable cat creation design)</anno>
+                <br>
+                <br>
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 60px;">
+
+                <video src="Videos/ShortShowcase.mp4" autoplay loop muted width="100%" height="250px"></video>
+
+                <br>
+                <anno>(Gameplay example)</anno>
+                <br>
+                <br>
+
+            </main>
+
+
+             <main style="width: 150%;" id="scope">
+                <h3>Scope and Cutting</h3>
+                <p>
+One big decision I had to make while developing was to cut a core feature of the game. This feature had factory workers who enabled the factory pieces to work, their design would have the player managing and keeping the workers happy while the factory worked.
+                
+                   <br>
+
+                </p>
+   
+
+                <p>
+                    In the end I decided to cut them as I could slowly see the features adding up and the scope increasing every time I worked on them, this included keeping them fed, keeping them happy, fights breaking out, machines overheating among many other things. Looking at the gameplay I discovered that the core experience of the game was not managing these workers but instead it was building the factory, the workers ended up being an annoyance that players had to worry about instead of an engaging part of the game. 
+                </p>
+
+                <br>
+
+                <p>
+                    What helped me decide to cut them was looking at the impactful decisions players could make. The workers did not offer many decisions that were interesting for players and while they did help add some tension, chaos and funny moments, the resources required to add them in, make them engaging to manage and enjoyable to interact with, outweighed the benefits.
+                </p>
+                
+
+                
+               
+                
+            </main>
+
+            
+            <main style="text-align: center;
+            margin-top: 5px; margin-left: 130px;">
+                <br>
+                <img src="Images/WorkerExample.PNG"
+                width="360">
+                <br>
+                <anno>(Diagram on worker to factory interaction)</anno>
+                <br>
+                <br>
+
+                <br>
+                <img src="Images/Old Upgrade Designs.PNG"
+                width="360">
+                <br>
+                <anno>(Old station upgrade system)</anno>
+                <br>
+                <br>
+
+                <br>
+                <img src="Images/OldWorkerPurchases.PNG"
+                width="360">
+                <br>
+                <anno>(A design for how more workers would be gained)</anno>
+                <br>
+                <br>
+                
+            </main>
+
+
+            <main style="grid-column: 2 / 4;" id="conclusion">
+                <h2> Conclusions</h2>
+                <p>
+This project has been a great learning experience, going outside my comfort zone and making a genre I am not really familiar with has helped expand my design capabilities. I except a demo for this project to be out in the near future and depending on how it turns out possibly a full version. 
+
+                </p>
+
+            </main>
+
+            
+
+        </div>
+
+        
+        
+
+        
+        
+     
+
+        
+    </body>
+
+</html>
+

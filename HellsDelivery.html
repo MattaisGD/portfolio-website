@@ -1,0 +1,359 @@
+<!DOCTYPE html> <!--tell the browser this is html-->
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width,
+        initial-scale=1">
+        
+        <link rel="stylesheet" href="style.css">
+
+        <title>Hell's Delivery</title>
+
+        <style>
+            p
+            {
+                color: rgb(243, 193, 193);
+            }
+
+            h3
+            {
+                color: rgb(206, 69, 90);
+            }
+
+            navLabel
+            {
+                color: rgb(243, 193, 193)
+            }
+
+            main 
+            {
+                border: 2px, solid, rgba(54, 19, 19, 0);
+                background-color: rgb(87, 16, 39);
+                 margin-top: 5px;
+                width:auto;
+                height:fit-content;
+                grid-row: auto;
+                grid-column: auto;
+                
+            }
+
+
+            header_container
+            {
+                background-color: rgb(243, 193, 193);
+                
+            }
+
+            h1
+            {
+                color: rgb(87, 16, 39);
+            }
+
+            header
+            {
+                background-color: rgb(87, 16, 39)
+            }
+
+            anno
+            {
+                color: rgb(243, 193, 193);
+            }
+        </style>
+
+    </head>
+    <body style="background-image: url(Images/back.png);
+                background-repeat: repeat;">
+
+        <div class="box"> 
+            
+            <header_container>
+            <titleText> <h1 style="margin-left: 10px;">Mattais Ramos</h1>  </titleText> 
+
+            <header> <topBarLabel style="margin-left: 10px;"> Game Design, Programming </topBarLabel>  
+            <a href="index.html"  style="margin-left: 275px;""><topBarLabel>Home</topBarLabel></a>
+            <a href="projects.html"> <topBarLabel>Projects</topBarLabel></a>
+            <a href="Contact.html"><topBarLabel>Contact / About</topBarLabel></a>
+            </header>
+            </header_container>
+            
+            <nav style="background-image: url(Images/HellsDeliveryNav_2.png);
+            font-size: 10px;"> 
+                <ul>
+                    <li> <a href="#overview"><navLabel>Overview</navLabel></a></li>
+                    <li> <a href="#character"><navLabel>Character</navLabel></a></li>
+                    <li> <a href="#interactables"><navLabel>Interactables</navLabel></a></li>
+                    <li> <a href="#designDocs"><navLabel>Design Docs</navLabel> </a></li>
+                    <li>  </li>
+                </ul>
+            </nav>
+
+            
+            <main style="grid-column: 2 / 4;" id="overview">
+
+                <centerText> 
+                    <img style="margin-bottom: 0px;
+                    margin-top: 0px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                    color: white; max-width: 50%;
+                    text-align: center;" src="Images\HellsDelivery_TitleLogo.png">
+                    
+
+                    <iframe style="display: block; margin: auto;" height="167" frameborder="0" src="https://itch.io/embed/2473042" width="552"><a href="https://trantaya.itch.io/hells-delivery">
+                    Hell&#039;s Delivery by Aaliyah, Gobi, kateewhy, Chum, LucasMcCreadyDev</a>
+                    </iframe>
+
+                <br>
+
+                <h2>Try it here!</h2>
+                <br>
+
+
+                </centerText>
+                
+
+               
+                
+                <h2 >Project Overview</h2>
+
+                
+                <p>
+                    Hell’s Delivery is a couch co-op puzzle platformer 
+                    where you and a friend deliver packages for the devil. 
+                    Go on hellish adventures delivering unique and wacky 
+                    packages for the strange residents of hell.
+                    <br>
+                    <br>
+                    The current project is still in development, 
+                    there is a vertical slice prototype playable on Itch.IO!
+
+                </p>
+            </main>
+
+
+            <main id="character" >
+                <h2 >Character</h2>
+                <h3>Finite State Machine</h3>
+                <p>
+Our character controller uses a finite state machine to control all of their actions. Most of the player’s logic is kept within their current state. Some examples of some states are Airborne state, Jumping State, Attacking State etc. This state machine is made to be generic meaning it can be used for many use cases aside from the player. For example our Hell Hound enemy uses the same basic state machine.                     <br>
+                    
+                </p>
+
+                
+            </main>
+
+            
+
+            
+
+            <main style="text-align: center;
+            margin-top: 30px;"> 
+            <br>
+                <img src="Images/StateMachineTop.png"
+                width="400"> 
+                <br>
+                <anno>(Overview of the state machine)</anno>
+                <br>
+                <br>
+
+            </main>
+
+            <main style="grid-column: 2 / 4;">
+                <p>
+                    No solution is perfect!
+                    <br>
+                    One issue I ran into was when I wanted multiple states to happen at the same time. If I want to have 2 different states active at the same time I need 2 state machines but the code can quickly get messy, next time I’d look into using an hierarchical state machine for a more complex character.
+
+                </p>
+
+            </main>
+
+            
+            <main style="width: 125%;
+             margin-top: 55px;">
+                <h3>Character Physics</h3>
+                <p>
+Our players use a system that takes their current velocity value and attempts to move it towards the target velocity value by an acceleration. This method allows our players to interact with their environment and each other easily without any stuttering.
+
+                
+                   <br>
+                   <br>
+Expanding on this the players actually float slightly above the ground meaning they can traverse intense terrains without getting stuck, this was also useful for having players bounce on each other’s heads without causing any weird collisions.
+                    
+                </p>
+
+                
+               
+                
+            </main>
+
+            
+
+            <main style="text-align: center;
+            margin-top: -10px; margin-left: 100px;">
+                <br>
+                <video src="Videos/BasicMovementGif.mp4" autoplay loop muted playsinline width="100%" height="300px">
+                    
+                </video>
+                <br>
+                    <anno>(basic movement)</anno>
+                <br>
+                <br>
+
+                <img src="Images/Floating.png"
+                width="200">
+                <br>
+                <anno>(floating characters)</anno>
+                <br>
+                <br>
+            </main>
+            
+            <main style="width:150%;">
+                <h3>Game Feel</h3>
+                <p>
+                    The goal with this player controller was something easy to pick up but fun to just move around with. Our target audience for this game has a very wide range of skill so we needed our character controller not to be too difficult to pilot.
+                    <br>
+                    <br>
+Our player controller has all the basic game feel additions like jump buffering, coyote time and a quick turn but the quick turn is especially important for this character controller as it helps keep it accessible by offering quick and easy adjustments. 
+It works by multiplying the player’s acceleration value by the dot product of their current momentum and their target momentum based on an animation curve (opposite input = ~3x, same input = 1x) , so if they input the opposite value of their current movement direction they get a big boost in acceleration allowing them to adjust easily.
+                    <br>
+                    <br>
+To make things a little more interesting for players, I added a few extra moves for them to play around with. For example If you press the attack button twice while in the air you get a dive, and if you attack and jump right after, you get a spin jump.
+
+                </p>
+            </main>
+
+            <main style="margin-left: 140px;
+            text-align: center;
+            margin-top: 70px;"
+            >
+                <br>
+                <video src="Videos/Dives.mp4" autoplay loop muted playsinline width="100%" height="300px"></video>
+                <anno>(Player's dive move)</anno>
+                <br>
+                <br>
+                <video src="Videos/SpinJump.mp4" autoplay loop muted playsinline width="100%" height="300px"></video>
+                <anno>(Player's spin jump)</anno>
+                <br>
+                <br>
+            </main>
+
+               <main id="interactables" style="width: 145%;">
+                <h2 >Interactables</h2>
+                <p>
+Interactable objects are important to our game as all NPCs and most puzzle elements will need to be interacted with in some way. So when making the interactable system I attempted to make something versatile and easy to implement for level designers.                    <br>
+                    <br>
+                    This is where Unity Events came in. 
+                    <br>
+                    <br>
+                    Unity Events are essentially events that can be exposed and hooked up in the editor.
+For example, let's look at our summoning circle. The summoning circle is basically a button that the players can hold by holding down interact, the summoning circle should be able to do countless different things such as holding up platforms and opening doors among many others. Since I use Unity Events all the level editor has to do is drag a script over to the interactable event (On Interact, On Interact Hold, On Interact End) and choose which function they want to activate. 
+<br>
+<br>
+This method is super clean on the code end and easy for a bigger team to use. This also means that (almost) any function in the entire project can be hooked up to this button by a simple drag and drop which allows us to create new and unique ideas and implement them as quickly as possible.
+                    
+            </p>
+        </main>
+        <main style="margin-left: 125px; text-align: center;">
+            <br>    
+            <video src="Videos/SummoningCircle.mp4" autoplay loop muted playsinline width="100%" height="300px"></video>
+                 <br>
+                <anno>(Summoning Circle holding up platforms)</anno>
+                <br>
+                <br>
+                <video src="Videos/CarUnlock.mp4" autoplay loop muted playsinline width="100%" height="300px"></video>
+                 <br>
+                <anno>(Car Unlocking with interactable system)</anno>
+                <br>
+                <br>
+            </main>
+
+
+             <main  id="designDocs" style="width:285%; ">
+                <h2>Design Documents</h2>
+                <h3> Car Minigame</h3>
+                <p>
+Below is the initial design for the game and a gif of the current version being played, this shows an example of my pipeline for creating new features! 
+<br>
+<br>
+The unlockable car is a simple minigame where the player has to time button presses a few times in a row in order to “unlock” a car. Initially I only created the car for use in this specific minigame scene but at some point in development we decided we also wanted these cars to be outside of this minigame environment. Because I had only planned for the car to be unlocked inside the minigame it relied on things only available inside the minigame scene, this posed a challenge and as a lesson on how to program things
+                    <br>
+
+
+                </p>
+            </main>
+
+            <main style="border: 2px, solid, rgba(46, 0, 0, 0);
+    background-color: rgba(90, 31, 31, 0);
+    box-shadow: 5px 5px rgba(12, 0, 8, 0);"></main>
+
+        <main style="margin-left: 0dvh; text-align: center; width:280%">
+            <br>
+            <img src="Images/CarMinigame.png"
+                width="600"> 
+                <br>
+                <anno>
+                    (Design document of the Car Minigame)
+                </anno>
+                <br>
+                <br>
+        </main>
+
+        <main style="border: 2px, solid, rgba(46, 0, 0, 0);
+    background-color: rgba(90, 31, 31, 0);
+    box-shadow: 5px 5px rgba(12, 0, 8, 0);"></main>
+
+        <main style="margin-left: 0px; text-align: center;
+        width:280%">
+                <br>
+                <video src="Videos/CarMinigame.mp4" autoplay loop muted playsinline width="800" height="400px"></video>
+                <br>
+                <anno>
+                    (Gameplay prototype of the Car Minigame)
+                </anno>
+                <br>
+                <br>
+            </main>
+
+        
+             <main style="border: 2px, solid, rgba(46, 0, 0, 0);
+    background-color: rgba(90, 31, 31, 0);
+    box-shadow: 5px 5px rgba(12, 0, 8, 0);"></main>
+            
+            <main style="margin-left: 0dvh; text-align: center; width:280%">
+            <h3> Crane Mechanic</h3>
+            <p>This document outlines the basic functionality
+                of our Crane level mechanic. One player is able to
+                get in the crane and move objects around, while the 
+                other player uses those objects for platforming
+            </p>
+                <br>
+            <img src="Images/CraneDoc.PNG"
+                width="600"> 
+                <br>
+                <anno>
+                    (Design document for the Crane)
+                </anno>
+                <br>
+                <br>
+        </main>
+        
+
+        </div>
+
+        
+        
+
+        
+        
+     
+
+        
+    </body>
+
+</html>
+
