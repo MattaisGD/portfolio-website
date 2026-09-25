@@ -5,9 +5,8 @@
     <head>
 
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,
+        <meta name="viewport" content="width-device-width,
         initial-scale=1">
-        
         
         <link rel="stylesheet" href="style.css">
 
@@ -50,14 +49,19 @@
         <div class="box"> 
             
             
-               <header_container>
+              
+              <header_container >
             <titleText> <h1 style="margin-left: 1%;">Mattais Ramos</h1>  </titleText> 
 
             <header> <topBarLabel style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
-            <a href="index.html"  style="margin-left: 29%;""><topBarLabel>Home</topBarLabel></a>
+            <a href="index.html"  style="margin-left: 27%;"><topBarLabel>Home</topBarLabel></a>
+            <topBarLabel>|</topBarLabel>
             <a href="projects.html"> <topBarLabel>Projects</topBarLabel></a>
+             <topBarLabel>|</topBarLabel>
+           
             <a href="Contact.html"><topBarLabel>Contact / About</topBarLabel></a>
-            </header>
+            
+        </header>
             </header_container>
             
                 <nav style="background-image: url(Images/NavBar.png);"> 
@@ -79,36 +83,42 @@
                 padding-left: 5px;
                 padding-right:5px;
                 margin-left: 42%;
-                grid-row: 2/3;">
+                grid-column: 2/4;">
                 <h1>Featured</h1>
                 </main>
                 <br>
             <main style="width:80%; margin-left: 10%;
-            grid-row: 3/4;">
+            grid-column: 2/4;">
             <br>
-            <video src="Videos/Demo Reel (1).mp4" autoplay loop muted playsinline width="100%" height="32%"></video>
+            <video src="Videos/Demo Reel (1).mp4" autoplay loop muted playsinline width="100%" height="320px"></video>
             <br>
             <br>
             </main>
             
             
 
-             <div class="gridContainter" style="grid-row: 4/5;">
+             <div class="gridContainter" style="grid-column: 2/4;
+             display: inline;
+             text-align: center;
+             ">
                 
-
-                <a href="HellsDelivery.html" style="margin-left: 50%;">
-                    <button class = "cart" 
-                    style="background-image: url(Images/HellsDeliveryCart.png);">
-                        <gameLabel><h2>Hells Delivery</h2></gameLabel>
+                <div style="position: relative; display: inline;">
+                <a href="HellsDelivery.html">
+                    <button class = "cart" >
+                    <img src="Images/HellsDeliveryCart.png" style="width: 100%;">
+                        
                     </button>
                 </a>
+                </div>
                 
-                <a href="CatDistServ.html" style="margin-left: 50%;">
-                <button class = "cart" 
-                style="background-image: url(Images/CatDistServiceCart.png);">
-                <gameLabel><h2>Cat Dist. Service</h2></gameLabel>
+                <div style="position: relative; display: inline;">
+                <a href="CatDistServ.html">
+                <button >
+                <img src="Images/CatDistServiceCart.png" style="width: 100%;">
+                
                 </button>
                 </a>
+                </div>
 
             </div>
 

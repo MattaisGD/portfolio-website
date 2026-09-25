@@ -5,8 +5,8 @@
     <head>
 
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,
-        initial-scale=1.0">
+        <meta name="viewport" content="width-device-width,
+        initial-scale=1">
         
         <link rel="stylesheet" href="style.css">
 
@@ -32,11 +32,12 @@
             {
                 border: 2px, solid, rgba(54, 19, 19, 0);
                 background-color: rgb(87, 16, 39);
-                 margin-top: 5px;
-                width:auto;
+                margin-top: 5px;
+                width:100%;
                 height:fit-content;
                 grid-row: auto;
                 grid-column: auto;
+                
                 
             }
 
@@ -69,14 +70,19 @@
 
         <div class="box"> 
             
-            <header_container>
-            <titleText> <h1 style="margin-left: 10px;">Mattais Ramos</h1>  </titleText> 
+           
+              <header_container >
+            <titleText> <h1 style="margin-left: 1%;">Mattais Ramos</h1>  </titleText> 
 
-            <header> <topBarLabel style="margin-left: 10px;"> Game Design, Programming </topBarLabel>  
-            <a href="index.html"  style="margin-left: 275px;""><topBarLabel>Home</topBarLabel></a>
+            <header> <topBarLabel style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
+            <a href="index.html"  style="margin-left: 27%;"><topBarLabel>Home</topBarLabel></a>
+            <topBarLabel>|</topBarLabel>
             <a href="projects.html"> <topBarLabel>Projects</topBarLabel></a>
+             <topBarLabel>|</topBarLabel>
+           
             <a href="Contact.html"><topBarLabel>Contact / About</topBarLabel></a>
-            </header>
+            
+        </header>
             </header_container>
             
             <nav style="background-image: url(Images/HellsDeliveryNav_2.png);
@@ -135,7 +141,10 @@
             </main>
 
 
-            <main id="character" >
+            <main id="character" 
+            style="
+            grid-column: 2 / 3;
+            ">
                 <h2 >Character</h2>
                 <h3>Finite State Machine</h3>
                 <p>
@@ -151,10 +160,13 @@ Our character controller uses a finite state machine to control all of their act
             
 
             <main style="text-align: center;
-            margin-top: 30px;"> 
+
+            grid-column: 3 / 4;
+            
+            place-items: center;"> 
             <br>
-                <img src="Images/StateMachineTop.PNG"
-                width="400"> 
+                <img src="Images/StateMachineTop.png"
+                width="100%"> 
                 <br>
                 <anno>(Overview of the state machine)</anno>
                 <br>
@@ -173,8 +185,9 @@ Our character controller uses a finite state machine to control all of their act
             </main>
 
             
-            <main style="width: 125%;
-             margin-top: 55px;">
+            <main style="width: 100%;
+            margin-top: 55px;
+            min-width: 200px;">
                 <h3>Character Physics</h3>
                 <p>
 Our players use a system that takes their current velocity value and attempts to move it towards the target velocity value by an acceleration. This method allows our players to interact with their environment and each other easily without any stuttering.
@@ -194,7 +207,7 @@ Expanding on this the players actually float slightly above the ground meaning t
             
 
             <main style="text-align: center;
-            margin-top: -10px; margin-left: 100px;">
+            place-items: center;">
                 <br>
                 <video src="Videos/BasicMovementGif.mp4" autoplay loop muted playsinline width="100%" height="300px">
                     
@@ -205,14 +218,15 @@ Expanding on this the players actually float slightly above the ground meaning t
                 <br>
 
                 <img src="Images/Floating.png"
-                width="200">
+                width="60%">
                 <br>
                 <anno>(floating characters)</anno>
                 <br>
                 <br>
             </main>
             
-            <main style="width:150%;">
+            <main style="width:100%;
+           ">
                 <h3>Game Feel</h3>
                 <p>
                     The goal with this player controller was something easy to pick up but fun to just move around with. Our target audience for this game has a very wide range of skill so we needed our character controller not to be too difficult to pilot.
@@ -227,9 +241,10 @@ To make things a little more interesting for players, I added a few extra moves 
                 </p>
             </main>
 
-            <main style="margin-left: 140px;
+            <main style="
             text-align: center;
-            margin-top: 70px;"
+            margin-top: 70px;
+           "
             >
                 <br>
                 <video src="Videos/Dives.mp4" autoplay loop muted playsinline width="100%" height="300px"></video>
@@ -242,7 +257,7 @@ To make things a little more interesting for players, I added a few extra moves 
                 <br>
             </main>
 
-               <main id="interactables" style="width: 145%;">
+               <main id="interactables" style="width: 100%;">
                 <h2 >Interactables</h2>
                 <p>
 Interactable objects are important to our game as all NPCs and most puzzle elements will need to be interacted with in some way. So when making the interactable system I attempted to make something versatile and easy to implement for level designers.                    <br>
@@ -258,7 +273,7 @@ This method is super clean on the code end and easy for a bigger team to use. Th
                     
             </p>
         </main>
-        <main style="margin-left: 125px; text-align: center;">
+        <main style=" text-align: center;">
             <br>    
             <video src="Videos/SummoningCircle.mp4" autoplay loop muted playsinline width="100%" height="300px"></video>
                  <br>
@@ -273,7 +288,7 @@ This method is super clean on the code end and easy for a bigger team to use. Th
             </main>
 
 
-             <main  id="designDocs" style="width:285%; ">
+             <main  id="designDocs" style="width:100%; grid-column: 2/4;">
                 <h2>Design Documents</h2>
                 <h3> Car Minigame</h3>
                 <p>
@@ -287,14 +302,13 @@ The unlockable car is a simple minigame where the player has to time button pres
                 </p>
             </main>
 
-            <main style="border: 2px, solid, rgba(46, 0, 0, 0);
-    background-color: rgba(90, 31, 31, 0);
-    box-shadow: 5px 5px rgba(12, 0, 8, 0);"></main>
 
-        <main style="margin-left: 0dvh; text-align: center; width:280%">
+
+        <main style=" text-align: center; width:100%; 
+        grid-column: 2/4;">
             <br>
-            <img src="Images/CarMinigame.PNG"
-                width="600"> 
+            <img src="Images/CarMinigame.png"
+                width="100%"> 
                 <br>
                 <anno>
                     (Design document of the Car Minigame)
@@ -303,14 +317,13 @@ The unlockable car is a simple minigame where the player has to time button pres
                 <br>
         </main>
 
-        <main style="border: 2px, solid, rgba(46, 0, 0, 0);
-    background-color: rgba(90, 31, 31, 0);
-    box-shadow: 5px 5px rgba(12, 0, 8, 0);"></main>
 
-        <main style="margin-left: 0px; text-align: center;
-        width:280%">
+
+        <main style="text-align: center;
+        width:100%;
+        grid-column: 2/4;">
                 <br>
-                <video src="Videos/CarMinigame.mp4" autoplay loop muted playsinline width="800" height="400px"></video>
+                <video src="Videos/CarMinigame.mp4" autoplay loop muted playsinline width="100%" height="100%"></video>
                 <br>
                 <anno>
                     (Gameplay prototype of the Car Minigame)
@@ -319,12 +332,9 @@ The unlockable car is a simple minigame where the player has to time button pres
                 <br>
             </main>
 
-        
-             <main style="border: 2px, solid, rgba(46, 0, 0, 0);
-    background-color: rgba(90, 31, 31, 0);
-    box-shadow: 5px 5px rgba(12, 0, 8, 0);"></main>
             
-            <main style="margin-left: 0dvh; text-align: center; width:280%">
+            <main style="text-align: center; width:100%;
+            grid-column: 2/4;">
             <h3> Crane Mechanic</h3>
             <p>This document outlines the basic functionality
                 of our Crane level mechanic. One player is able to
@@ -333,7 +343,7 @@ The unlockable car is a simple minigame where the player has to time button pres
             </p>
                 <br>
             <img src="Images/CraneDoc.PNG"
-                width="600"> 
+                width="100%"> 
                 <br>
                 <anno>
                     (Design document for the Crane)
