@@ -62,6 +62,49 @@
             {
                 color: rgb(243, 193, 193);
             }
+
+            @media only screen and (max-width: 500px) {
+                
+
+                #nav
+                {
+                    
+                    display: none;
+                }
+
+                #header
+                {
+                    font-size: 10px;
+                }
+
+                #headNav
+                {
+                    font-size: 14px;
+                    
+                }
+
+                #leftMostHeadNav
+                {
+                    font-size: 14px;
+                    margin-left: -18%;
+                }
+
+                .box
+                {
+                     max-width: 1000px;
+                    margin:50px auto;
+
+                    display: grid;
+                    grid-gap: 20px 10px;
+                    grid-template-columns: 0 minmax(0, 1fr)  minmax(0, 1fr);
+                    justify-content: center;
+                }
+
+                main
+                {
+                    grid-column: 2 / 4;
+                }
+            }
         </style>
 
     </head>
@@ -71,21 +114,24 @@
         <div class="box"> 
             
            
-              <header_container >
+            <header_container id="header">
+                
             <titleText> <h1 style="margin-left: 1%;">Mattais Ramos</h1>  </titleText> 
 
-            <header> <topBarLabel style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
-            <a href="index.html"  style="margin-left: 27%;"><topBarLabel>Home</topBarLabel></a>
-            <topBarLabel>|</topBarLabel>
-            <a href="projects.html"> <topBarLabel>Projects</topBarLabel></a>
-             <topBarLabel>|</topBarLabel>
+            <div id="headNav">
+            <header> <topBarLabel  id="headNav" style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
+            <a href="index.html"  style="margin-left: 27%;"><topBarLabel id="leftMostHeadNav">Home</topBarLabel></a>
+            <topBarLabel id="headNav">|</topBarLabel>
+            <a href="projects.html"> <topBarLabel id="headNav">Projects</topBarLabel></a>
+             <topBarLabel id="headNav">|</topBarLabel>
            
-            <a href="Contact.html"><topBarLabel>Contact / About</topBarLabel></a>
-            
+            <a href="Contact.html"><topBarLabel id="headNav">Contact/About</topBarLabel></a>
+            </div>
+
         </header>
             </header_container>
             
-            <nav style="background-image: url(Images/HellsDeliveryNav_2.png);
+            <nav id="nav" style="background-image: url(Images/HellsDeliveryNav_2.png);
             font-size: 10px;"> 
                 <ul>
                     <li> <a href="#overview"><navLabel>Overview</navLabel></a></li>
@@ -187,7 +233,8 @@ Our character controller uses a finite state machine to control all of their act
             
             <main style="width: 100%;
             margin-top: 55px;
-            min-width: 200px;">
+            min-width: 200px;
+            ">
                 <h3>Character Physics</h3>
                 <p>
 Our players use a system that takes their current velocity value and attempts to move it towards the target velocity value by an acceleration. This method allows our players to interact with their environment and each other easily without any stuttering.
@@ -207,7 +254,8 @@ Expanding on this the players actually float slightly above the ground meaning t
             
 
             <main style="text-align: center;
-            place-items: center;">
+            place-items: center;
+            ">
                 <br>
                 <video src="Videos/BasicMovementGif.mp4" autoplay loop muted playsinline width="100%" height="300px">
                     
@@ -226,7 +274,7 @@ Expanding on this the players actually float slightly above the ground meaning t
             </main>
             
             <main style="width:100%;
-           ">
+            ">
                 <h3>Game Feel</h3>
                 <p>
                     The goal with this player controller was something easy to pick up but fun to just move around with. Our target audience for this game has a very wide range of skill so we needed our character controller not to be too difficult to pilot.
@@ -243,8 +291,8 @@ To make things a little more interesting for players, I added a few extra moves 
 
             <main style="
             text-align: center;
-            margin-top: 70px;
-           "
+            margin-top: 16%;
+            "
             >
                 <br>
                 <video src="Videos/Dives.mp4" autoplay loop muted playsinline width="100%" height="300px"></video>

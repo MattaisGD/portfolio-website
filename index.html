@@ -36,6 +36,32 @@
                 background-color: #460303;
                 
             }
+
+            @media only screen and (max-width: 500px) {
+                
+
+                #nav
+                {
+                    display: none;
+                }
+
+                #header
+                {
+                    font-size: 10px;
+                }
+
+                #headNav
+                {
+                    font-size: 14px;
+                    
+                }
+
+                #leftMostHeadNav
+                {
+                    font-size: 14px;
+                    margin-left: -18%;
+                }
+            }
         </style>
 
     </head>
@@ -50,21 +76,27 @@
             
             
               
-              <header_container >
+               <header_container id="header">
+                
             <titleText> <h1 style="margin-left: 1%;">Mattais Ramos</h1>  </titleText> 
 
-            <header> <topBarLabel style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
-            <a href="index.html"  style="margin-left: 27%;"><topBarLabel>Home</topBarLabel></a>
-            <topBarLabel>|</topBarLabel>
-            <a href="projects.html"> <topBarLabel>Projects</topBarLabel></a>
-             <topBarLabel>|</topBarLabel>
+            <div id="headNav">
+            <header> <topBarLabel  id="headNav" style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
+            <a href="index.html"  style="margin-left: 27%;"><topBarLabel id="leftMostHeadNav">Home</topBarLabel></a>
+            <topBarLabel id="headNav">|</topBarLabel>
+            <a href="projects.html"> <topBarLabel id="headNav">Projects</topBarLabel></a>
+             <topBarLabel id="headNav">|</topBarLabel>
            
-            <a href="Contact.html"><topBarLabel>Contact / About</topBarLabel></a>
+            <a href="Contact.html"><topBarLabel id="headNav">Contact/About</topBarLabel></a>
+            </div>
+
+        </header>
+            </header_container>
             
         </header>
             </header_container>
             
-                <nav style="background-image: url(Images/NavBar.png);"> 
+                <nav id="nav" style="background-image: url(Images/NavBar.png);"> 
                 <ul>
                     <li> <a href="#featured"><navLabel>Featured</navLabel></a></li>
                     <li>  </li>
@@ -82,8 +114,8 @@
                 padding-bottom: 10px;
                 padding-left: 5px;
                 padding-right:5px;
-                margin-left: 42%;
-                grid-column: 2/4;">
+                grid-column: 2/4;
+                margin: auto;">
                 <h1>Featured</h1>
                 </main>
                 <br>

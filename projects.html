@@ -40,31 +40,75 @@
                 
             }
 
+            @media only screen and (max-width: 500px) {
+                
+
+                #nav
+                {
+                    display: none;
+                }
+
+                #header
+                {
+                    font-size: 10px;
+                }
+
+                #headNav
+                {
+                    font-size: 14px;
+                    
+                }
+
+                #leftMostHeadNav
+                {
+                    font-size: 14px;
+                    margin-left: -18%;
+                }
+
+                p
+                {
+                    font-size: medium;
+                }
+
+                h1
+                {
+                    font-size: 22px;
+                }
+
+                
+            }
+
         </style>
 
 
     </head>
 
+   
+    
+
     <body style="background-color: #1d456e;"  id="projects">
 
-        <div class="box"> 
+        <div class="box" id="box"> 
             
             
-              <header_container >
+            <header_container id="header">
+                
             <titleText> <h1 style="margin-left: 1%;">Mattais Ramos</h1>  </titleText> 
 
-            <header> <topBarLabel style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
-            <a href="index.html"  style="margin-left: 27%;"><topBarLabel>Home</topBarLabel></a>
-            <topBarLabel>|</topBarLabel>
-            <a href="projects.html"> <topBarLabel>Projects</topBarLabel></a>
-             <topBarLabel>|</topBarLabel>
+            <div id="headNav">
+            <header> <topBarLabel  id="headNav" style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
+            <a href="index.html"  style="margin-left: 27%;"><topBarLabel id="leftMostHeadNav">Home</topBarLabel></a>
+            <topBarLabel id="headNav">|</topBarLabel>
+            <a href="projects.html"> <topBarLabel id="headNav">Projects</topBarLabel></a>
+             <topBarLabel id="headNav">|</topBarLabel>
            
-            <a href="Contact.html"><topBarLabel>Contact / About</topBarLabel></a>
-            
+            <a href="Contact.html"><topBarLabel id="headNav">Contact/About</topBarLabel></a>
+            </div>
+
         </header>
             </header_container>
             
-            <nav style="background-image: url(Images/CaveNavBar.png);"> 
+            <nav id="nav" style="background-image: url(Images/CaveNavBar.png);"> 
                 <ul>
                     <li> <a href="#projects"><navLabel>Projects</navLabel></a></li>
                     <li> <a href="#jams"><navLabel>Jams</navLabel></a></li>
@@ -76,15 +120,16 @@
 
             <div  class="gridContainter"
             style="margin-top: 10px; grid-column: 2/4;
-            text-align: center;">
+            text-align: center; width: auto;">
                 <div class = "featureText">  </div>
                 <div class = "featureText" 
-                style="margin-bottom: 20%;"> <h1 id="projects">Projects</h1> </div>
+                style=" width: 100%;min-width: 0; "> <h1 style="min-width: 0;" id="projects">Projects</h1> </div>
                 <div class = "featureText">  </div>
                 
                 
-                <div style="position: relative; display: inline;">
-                <a href="HellsDelivery.html"">
+                
+                <div style="position: relative;">
+                <a href="HellsDelivery.html">
                     <button class = "cart" 
                     >
                     <img src="Images/HellsDeliveryCart.png" style="width: 100%;">
@@ -93,7 +138,9 @@
                 </a>
                 </div>
                 
-                <div style="position: relative; display: inline;">
+                <div style="position: relative; display: inline;
+                width: 100%;
+                min-width: 0;">
                 <a href="CatDistServ.html">
                 <button >
                 <img src="Images/CatDistServiceCart.png" style="width: 100%;">
@@ -104,19 +151,12 @@
 
                 
 
-                
-                <br >
-                <br>
-                <br>
-                <br>
-                
-
                 <main style="background-color: rgba(255, 255, 255, 0);
                 border-color: rgba(245, 222, 179, 0);
                 text-align: center;
                 grid-column: 1/4;
                 margin-bottom: 10px;
-                margin-top: 80px;
+                
                 box-shadow: 5px 5px rgba(0, 0, 0, 0);"> <h1 id="jams">Small Projects and Jams</h1></main>
                 
                 <a href="#jams">
@@ -165,7 +205,9 @@
                 
 
                 <div style="grid-column: 3/4;
-                display: grid;">
+                display: grid;
+                margin: auto"
+                id="g_img2">
                     <img id="g_img" src="Images/BoneHeadCart.png"
                     style="width: 100%;
                     margin-top: 36px;"> 
