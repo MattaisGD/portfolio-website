@@ -29,6 +29,28 @@ titleText
         font-size: 10px;
     }
 
+     #nav
+    {
+        
+        display: none;
+    }
+
+    #header
+    {
+        font-size: 10px;
+    }
+
+    #headNav
+    {
+        font-size: 16px;
+        
+    }
+
+    #topHeadNav
+    {
+        font-size: 14px;
+    }
+
 }
 
 .sticky
