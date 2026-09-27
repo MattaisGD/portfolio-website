@@ -78,6 +78,11 @@
                 color: #5635db;
             }
 
+            #headNav
+            {
+                color: #f2f2f2;
+            }
+
             @keyframes scrollBackground {
 
                 from
@@ -108,15 +113,15 @@
 
                 #headNav
                 {
-                    font-size: 14px;
+                    font-size: 16px;
                     
                 }
 
-                #leftMostHeadNav
+                #topHeadNav
                 {
                     font-size: 14px;
-                    margin-left: -18%;
                 }
+                
 
                 main
                 {
@@ -134,13 +139,16 @@
         <div class="box"> 
             
             
-               <header_container id="header">
+              <header_container id="header">
                 
             <titleText> <h1 style="margin-left: 1%;">Mattais Ramos</h1>  </titleText> 
 
-            <div id="headNav">
-            <header> <topBarLabel  id="headNav" style="margin-left: 1%;"> Game Design, Programming </topBarLabel>  
-            <a href="index.html"  style="margin-left: 27%;"><topBarLabel id="leftMostHeadNav">Home</topBarLabel></a>
+            <div>
+            <header> <topBarLabel id="topHeadNav"> Game Design, Programming </topBarLabel>  
+            </div>
+
+            <div  style=" text-align: right;">
+            <a href="index.html"><topBarLabel id="headNav">Home</topBarLabel></a>
             <topBarLabel id="headNav">|</topBarLabel>
             <a href="projects.html"> <topBarLabel id="headNav">Projects</topBarLabel></a>
              <topBarLabel id="headNav">|</topBarLabel>
@@ -315,7 +323,7 @@ This really makes the process a lot easier, as in order to implement and test a 
              <main style="width: 100%;
              text-align: center;">
                 
-                <img src="Images/Excel_1.PNG"
+                <img src="Images/Excel_1.png"
                 width="100%">
                 <br>
                 <anno>(Day earnings simulation)</anno>
