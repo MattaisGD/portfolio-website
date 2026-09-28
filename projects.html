@@ -88,6 +88,11 @@
                    width: 60%;
                    margin: auto;
                 }
+
+                #g_label
+                {
+                    font-size: 10px;
+                }
                 
             }
 
@@ -162,7 +167,7 @@
                     <button class = "cart" 
                     >
                     <img src="Images/HellsDeliveryCart.png" style="width: 100%;">
-                        <gameLabel><h2>Hells Delivery</h2></gameLabel>
+                        <gameLabel><h2 id="g_label">Hells Delivery</h2></gameLabel>
                     </button>
                 </a>
                 </div>
@@ -173,7 +178,7 @@
                 <a href="CatDistServ.html">
                 <button >
                 <img src="Images/CatDistServiceCart.png" style="width: 100%;">
-                <gameLabel><h2>Cat Dist. Service</h2></gameLabel>
+                <gameLabel><h2 id="g_label">Cat Dist. Service</h2></gameLabel>
                 </button>
                 </a>
                 </div>
@@ -211,7 +216,7 @@
               
                 <br>
                 <div  id="g_contain" style="
-                width: 92%;
+                width: 100%;
                 background-color: #0f5d85;
                 border-radius: 10%;
                 box-shadow: 5px 5px rgba(0, 0, 0, 0.8);
@@ -243,9 +248,10 @@
                 </div>
 
                 <div style="grid-column: 1/4;
-                width: 92%;
-                display: grid;">
-                 <iframe id="g_link" style="display: block; margin: auto;" height="167" frameborder="0" src="https://itch.io/embed/2473042" width="100%"><a href="https://trantaya.itch.io/hells-delivery">
+                width: 100%;
+                display: inline;
+                margin: auto;">
+                 <iframe id="g_link" style="display: block; margin: auto;" height="167" frameborder="0" src="https://itch.io/embed/2473042" width="75%"><a href="https://trantaya.itch.io/hells-delivery">
                 Hell&#039;s Delivery by Aaliyah, Gobi, kateewhy, Chum, LucasMcCreadyDev</a>
                 </iframe>
                 </div>
@@ -345,21 +351,21 @@
                             document.getElementById("g_title").innerHTML = "Carolyn the Witch";
                             document.getElementById("g_desc").innerHTML = "I made this project in around 15 days for the 1-bit jam. This jam has devs use a maximum of 2 colours on screen at all times. In Carolyn the Witch players can switch between 4 main abilities, fireball, jump, speed and teleport, without these abilities the player has only a very basic move-set so the player has to switch between these powerful abilities to complete platforming challenges."
                             document.getElementById("g_img").src = "Images/C_WitchScreenShot.png"
-                            document.getElementById("g_link").outerHTML = "<iframe frameborder='0' id='g_link' src='https://itch.io/embed/3031760' width='100%' height='167'><a href='https://mattaissc.itch.io/carolyn-the-witch'>Carolyn the Witch by Chum</a></iframe>"
+                            document.getElementById("g_link").outerHTML = "<iframe frameborder='0' id='g_link' src='https://itch.io/embed/3031760' width='75%' height='167'><a href='https://mattaissc.itch.io/carolyn-the-witch'>Carolyn the Witch by Chum</a></iframe>"
                             
                         break;
                         case "S_Fire":
                             document.getElementById("g_title").innerHTML = "Soul Fire";
                             document.getElementById("g_desc").innerHTML = "Soul Fire was created in 10 days for the GameBoy Jam, a game jam where devs have a limit of 4 colours and a Gameboy screen size. This game is a puzzle game, here I tried to deviate from my usual style. In this game players must use their soul along with fires from the tower to power torches and solve puzzles. Players cannot leave their soul behind so they must always find a way to complete the puzzle with their soul fire in hand."
                             document.getElementById("g_img").src = "Images/SoulFireScreenShot.png"
-                            document.getElementById("g_link").outerHTML = '<iframe frameborder="0" id="g_link" src="https://itch.io/embed/2991293" width="100%" height="167"><a href="https://mattaissc.itch.io/soul-fire">Soul Fire by Chum</a></iframe>'
+                            document.getElementById("g_link").outerHTML = '<iframe frameborder="0" id="g_link" src="https://itch.io/embed/2991293" width="75%" height="167"><a href="https://mattaissc.itch.io/soul-fire">Soul Fire by Chum</a></iframe>'
                            
                             break;
                         case "Climb":
                             document.getElementById("g_title").innerHTML = "The Climb";
                             document.getElementById("g_desc").innerHTML = "This was created for the GMTK Jam 2024. The theme was scale. For this project I created a vertical style platformer where players have to scale a mountain. A big part of this game was the unique scaling mechanic where players use a pickaxe to climb walls. I also tried to use the scale of the mountain to help players visualize their progress."
                             document.getElementById("g_img").src = "Images/ClimbScreenShot.png"
-                            document.getElementById("g_link").outerHTML = '<iframe frameborder="0" id="g_link" src="https://itch.io/embed/2911531" width="100%" height="167"><a href="https://mattaissc.itch.io/theclimb">TheClimb by Chum</a></iframe>'
+                            document.getElementById("g_link").outerHTML = '<iframe frameborder="0" id="g_link" src="https://itch.io/embed/2911531" width="75%" height="167"><a href="https://mattaissc.itch.io/theclimb">TheClimb by Chum</a></iframe>'
                                
                             break;
                     }
